@@ -1,9 +1,15 @@
 // Sample product data
 const products = [
-  { name: "apple", teln: "1234567890", cost: 19, description: "apples are good", picture: "https://hongshuo1.blob.core.windows.net/study/car.jpg?sp=r&st=2024-06-06T20:54:24Z&se=2024-06-07T04:54:24Z&spr=https&sv=2022-11-02&sr=b&sig=wnrvvE3jv3NSgfT%2F%2Fyn4CPe56xbOVqGdeOmdNsrdeyg%3D" },
-  { name: "berry", teln: "0987654321", cost: 20, description: "berries are great", picture: "https://hongshuo1.blob.core.windows.net/study/dan.jpg?sp=r&st=2024-06-06T20:54:39Z&se=2024-06-07T04:54:39Z&spr=https&sv=2022-11-02&sr=b&sig=gadWNFWcpgvZMBObDsFLbQk40hUZVxQqZAlnyRmtAfk%3D" },
-  { name: "eve", teln: "1122334455", cost: 95, description: "eve is a computer", picture: "https://hongshuo1.blob.core.windows.net/study/carl.jpg?sp=r&st=2024-06-06T20:56:11Z&se=2024-06-07T04:56:11Z&spr=https&sv=2022-11-02&sr=b&sig=JhpP%2FhGRTl8Ld9ddoQCELtGWmgBXtjv3aB9cBCvMXz4%3D" },
-  { name: "fig", teln: "1122334455", cost: 42, description: "figs are cheap", picture: "https://hongshuo1.blob.core.windows.net/study/carl.jpg?sp=r&st=2024-06-06T20:56:11Z&se=2024-06-07T04:56:11Z&spr=https&sv=2022-11-02&sr=b&sig=JhpP%2FhGRTl8Ld9ddoQCELtGWmgBXtjv3aB9cBCvMXz4%3D" },
+  { name: "apple", teln: "1213414", cost: 19, description: "apples are good", picture: "https://hongshuo1.blob.core.windows.net/study/car.jpg?sp=r&st=2024-06-06T21:18:05Z&se=2024-06-07T05:18:05Z&spr=https&sv=2022-11-02&sr=b&sig=NP%2FnvCNZRYLaFqqPFbWyMseSO3xXDgl3Oqzgp21Do4E%3D" },
+  { name: "berry", teln: "3456645", cost: 20, description: "berries are great", picture: "" },
+  { name: "carl", teln: "56765684", cost: "", description: "carl is also a cat", picture: "https://hongshuo1.blob.core.windows.net/study/carl.jpg?sp=r&st=2024-06-06T21:18:42Z&se=2024-06-07T05:18:42Z&spr=https&sv=2022-11-02&sr=b&sig=h53zbY9O9YDQ%2FiFA1VBToEj4ce9DvLGAeWkB7qWvE%2FQ%3D" },
+  { name: "dave", teln: "54353456", cost: 0, description: "who is Dave", picture: "https://hongshuo1.blob.core.windows.net/study/dan.jpg?sp=r&st=2024-06-06T21:19:24Z&se=2024-06-07T05:19:24Z&spr=https&sv=2022-11-02&sr=b&sig=InvV22zP7qTs0dyvDoxag8Z%2B5ZjeC8PMSFILsOLAGc4%3D" },
+  { name: "eve", teln: "3453576343", cost: 95, description: "eve is a computer", picture: "" },
+  { name: "fig", teln: "1234563434", cost: 42, description: "figs are cheap", picture: "" },
+  { name: "grape", teln: "21321345436656", cost: "", description: "grapes red or green", picture: "" },
+  { name: "helya", teln: "65756747656", cost: 1000, description: "helya is very smart", picture: "https://hongshuo1.blob.core.windows.net/study/%E7%85%A7%E7%89%87.jpg?sp=r&st=2024-06-06T21:20:02Z&se=2024-06-07T05:20:02Z&spr=https&sv=2022-11-02&sr=b&sig=HPyeZlSQoEOGb3IajUsxEyQA0gBqdW3pwN%2F%2BFX7B0iA%3D" },
+  { name: "imtiaz", teln: "32424324", cost: 600, description: "", picture: "" },
+  { name: "sinong", teln: "57689086565", cost: 999, description: "sinong is also very smart", picture: "https://hongshuo1.blob.core.windows.net/study/sinong.jpg?sp=r&st=2024-06-06T21:10:47Z&se=2024-06-07T05:10:47Z&spr=https&sv=2022-11-02&sr=b&sig=%2Bcw6TgyluFV%2FRRMgvFiLjTTJvBN%2BF3RaGMhezVLrPz4%3D" }
 ];
 
 document.getElementById('displayForm').addEventListener('submit', function(event) {
