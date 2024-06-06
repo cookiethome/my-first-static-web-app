@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Room Information</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Room Information</h1>
-    <form id="roomForm">
-      <label for="roomName">Enter Room Name:</label>
-      <input type="text" id="roomName" name="roomName" required>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="roomInfo">
-      <!-- Room information will be displayed here -->
+    <div class="container">
+        <h1>Product Management</h1>
+        
+        <!-- Form to display product by name -->
+        <form id="displayForm">
+            <h2>Display Product by Name</h2>
+            <label for="displayNameInput">Name:</label>
+            <input type="text" id="displayNameInput" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Form to filter products by cost range -->
+        <form id="filterForm">
+            <h2>Filter Products by Cost Range</h2>
+            <label for="minCost">Min Cost:</label>
+            <input type="number" id="minCost" name="minCost" required>
+            <label for="maxCost">Max Cost:</label>
+            <input type="number" id="maxCost" name="maxCost" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Form to update product description by name -->
+        <form id="updateForm">
+            <h2>Update Product Description</h2>
+            <label for="updateName">Name:</label>
+            <input type="text" id="updateName" name="name" required>
+            <label for="newDescription">New Description:</label>
+            <input type="text" id="newDescription" name="description" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Form to delete product or picture by name -->
+        <form id="deleteForm">
+            <h2>Delete Product or Picture by Name</h2>
+            <label for="deleteName">Name:</label>
+            <input type="text" id="deleteName" name="name" required>
+            <button type="button" onclick="deleteProduct()">Delete Product</button>
+            <button type="button" onclick="deletePicture()">Delete Picture</button>
+        </form>
+
+        <!-- Display area -->
+        <div id="productDisplay" class="hidden">
+            <h2>Product Details</h2>
+            <div id="productDetails"></div>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
