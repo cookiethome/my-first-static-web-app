@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: "A place where you can cook delicious meals.",
         image: "images/kitchen.jpg"
       },
-      livingRoom: {
+      livingroom: {
         name: "Living Room",
         description: "A room for relaxing and socializing.",
         image: "images/living_room.jpg"
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     roomForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const roomName = document.getElementById('roomName').value.trim();
-      const room = rooms[roomName.toLowerCase()];
+      const roomName = document.getElementById('roomName').value.trim().toLowerCase();
+      const room = rooms[roomName];
       if (room) {
         roomInfo.innerHTML = `
           <h2>${room.name}</h2>
