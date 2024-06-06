@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Information</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+  <div class="container">
+    <h1>Room Information</h1>
+    <form id="roomForm">
+      <label for="roomName">Enter Room Name:</label>
+      <input type="text" id="roomName" name="roomName" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="roomInfo">
+      <!-- Room information will be displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
