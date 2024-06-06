@@ -32,6 +32,15 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
   updateProductDescription(name, newDescription);
 });
 
+document.getElementById('addForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = document.getElementById('addName').value;
+  const cost = parseFloat(document.getElementById('addCost').value);
+  const picture = document.getElementById('addPicture').value;
+  const description = document.getElementById('addDescription').value;
+  addNewProduct(name, cost, picture, description);
+});
+
 function displayProductByName(name) {
   const product = products.find(p => p.name === name);
   const displayDiv = document.getElementById('productDisplay');
@@ -43,7 +52,7 @@ function displayProductByName(name) {
           <p><strong>Cost:</strong> ${product.cost}</p>
           <p><strong>Description:</strong> ${product.description}</p>
           <p><strong>Teln:</strong> ${product.teln}</p>
-          <img src="${product.picture}" alt="Product Image">
+          <img src="${product.picture}" alt="Product Image" ${product.picture ? '' : 'style="display:none;"'}>
       `;
   } else {
       detailsDiv.innerHTML = '<p>No information or picture available</p>';
@@ -63,7 +72,7 @@ function filterProductsByCost(minCost, maxCost) {
           <p><strong>Cost:</strong> ${p.cost}</p>
           <p><strong>Description:</strong> ${p.description}</p>
           <p><strong>Teln:</strong> ${p.teln}</p>
-          <img src="${p.picture}" alt="Product Image">
+          <img src="${p.picture}" alt="Product Image" ${p.picture ? '' : 'style="display:none;"'}>
       `).join('<hr>');
   } else {
       detailsDiv.innerHTML = '<p>No information or picture available</p>';
@@ -102,4 +111,15 @@ function deletePicture() {
   } else {
       alert(`Product with name ${name} not found`);
   }
+}
+
+function addNewProduct(name, cost, picture, description) {
+  const existingProduct = products.find(p => p.name === name);
+  if (existingProduct) {
+      alert(`Product with name ${name} already exists`);
+      return;
+  }
+  const newProduct = { name, cost, description, picture, teln: "" };
+  products.push(newProduct);
+  alert(`Product ${name} added successfully`);
 }

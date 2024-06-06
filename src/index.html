@@ -46,6 +46,20 @@
             <button type="button" onclick="deleteProduct()">Delete Product</button>
             <button type="button" onclick="deletePicture()">Delete Picture</button>
         </form>
+        
+        <!-- Form to add a new product -->
+        <form id="addForm">
+            <h2>Add New Product</h2>
+            <label for="addName">Name:</label>
+            <input type="text" id="addName" name="name" required>
+            <label for="addCost">Cost:</label>
+            <input type="number" id="addCost" name="cost" required>
+            <label for="addPicture">Picture URL:</label>
+            <input type="text" id="addPicture" name="picture" required>
+            <label for="addDescription">Description:</label>
+            <input type="text" id="addDescription" name="description" required>
+            <button type="submit">Submit</button>
+        </form>
 
         <!-- Display area -->
         <div id="productDisplay" class="hidden">
