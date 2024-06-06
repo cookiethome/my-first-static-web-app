@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     roomForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const roomName = document.getElementById('roomName').value.trim().toLowerCase();
+      console.log('Room Name:', roomName); // Debug log
       const room = rooms[roomName];
+      console.log('Room:', room); // Debug log
       if (room) {
         roomInfo.innerHTML = `
           <h2>${room.name}</h2>
